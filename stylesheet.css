@@ -1,0 +1,229 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP');
+
+/*body {*/
+/*  background-image : url('images/photo0000-2778.jpg');*/
+/*  background-position: center center;*/
+/*  background-repeat: no-repeat;*/
+/*  background-attachment: fixed;*/
+/*  background-size: 100vw 100vh;*/
+/*}*/
+
+body {
+  margin: 0;
+  padding: 0;
+}
+.scroll-area {
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  -webkit-scroll-behavior: smooth;
+  scroll-behavior: smooth;
+  -webkit-scroll-snap-type: mandatory;
+  scroll-snap-type: mandatory;
+  -webkit-scroll-snap-points-y: repeat(100%);
+  scroll-snap-points-y: repeat(100%);
+}
+.box {
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  font-size: 80px;
+  display: flex;
+  /*align-items: center;  縦方向中央揃え */
+  /*justify-content: center;  横方向中央揃え */
+  flex-direction: column;
+}
+
+
+.box_product {
+  background-color: #66CCFF;
+  background-image: url(images/clouds-4215608_1280.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.box_skill {
+  background-color: #66CCFF;
+  background-image: url(images/sky_00009.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.box_profile {
+  background-image: url(images/PAKU2028texture1993_TP_V.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+}
+
+.box__bg_photo {
+  background-image: url(images/photo0000-2778.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.score1 {
+  margin-left: 200px;
+}
+
+.score2 {
+  margin-left: 243px;
+}
+
+.score3 {
+  margin-left: 94px;
+}
+
+.score4 {
+  margin-left: 245px;
+}
+
+
+p {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+h1 {
+    font-size: 80px;
+    color: blue;
+    font-family: 'Noto Serif JP', sans-serif;
+}
+
+.load-fade {
+    opacity : 0;
+    transition : all 5s;
+}
+
+.load-fade.done{
+    opacity : 1;
+    transform : translate(0, 0);}
+
+.out {
+  display: table;
+  width: 100vw;
+  height: 100vh;
+}
+ 
+.center {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  z-index: 5;
+}
+
+.profile {
+  top: -10%;
+  left: 10%;
+  position: relative;
+  width: 50%;
+  height: 80%;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border: 1px solid #707070;
+  border-radius: 152px;
+  opacity: 1;
+  color: black;
+  padding: 10px;
+  float: left;
+}
+
+
+.skill {
+  top: -10%;
+  left: 35%;
+  position: relative;
+  width: 50%;
+  height: 80%;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border: 1px solid #707070;
+  border-radius: 152px;
+  opacity: 1;
+  color: black;
+  padding: 10px;
+  float: left;
+}
+
+
+.product {
+  top: -10%;
+  left: 10%;
+  position: relative;
+  width: 50%;
+  height: 80%;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border: 1px solid #707070;
+  border-radius: 152px;
+  opacity: 1;
+  color: black;
+  padding: 10px;
+  float: left;
+}
+
+
+
+.title {
+  text-align: center;
+  font-size: 50px;
+  margin: 25px;
+}
+
+.text {
+  font-size: 25px;
+  margin-left: 20px;
+}
+
+.text-skill {
+  font-size:35px;
+  margin-left: 20px;
+}
+
+.skill-table {
+  border-spacing: 10px 0px;
+  margin-left: 100px;
+}
+
+.bird-img-right {
+    position: relative;
+    top: 50%;
+    left: 65%;
+    background-image: url("images/tori.jpg");  /* 表示する画像 */
+    width:  300px;       /* ※縦横を同値に */
+    height: 300px;       /* ※縦横を同値に */
+    border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
+    background-position: left top;  /* 横長画像の左上を基準に表示 */
+    display: inline-block;          /* 複数の画像を横に並べたい場合 */
+    float: left;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bird-img-left {
+    position: relative;
+    top: 40%;
+    left: 10%;
+    background-image: url("images/tori.jpg");  /* 表示する画像 */
+    width:  300px;       /* ※縦横を同値に */
+    height: 300px;       /* ※縦横を同値に */
+    border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
+    background-position: left top;  /* 横長画像の左上を基準に表示 */
+    display: inline-block;          /* 複数の画像を横に並べたい場合 */
+    float: left;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.fadein-hidden {
+  opacity: 0;
+}
+
+.is-show {
+  opacity: 1;
+}

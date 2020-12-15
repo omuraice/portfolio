@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="js/jquery.jqlouds.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="js/jquery.inview.min.js"></script>
+</head>
+<body>
+    <div class="scroll-area">
+        <div class="box box__bg_photo" id="sky">
+            <div class="title load-fade out">
+                <h1 class="center">SAYAKO YOKOKAWA</h1>
+            </div>
+        </div>
+        <div class="box box_profile">
+            <div class="profile-content fadein-hidden bird-img-right"></div>
+            <div class="profile-content fadein-hidden profile">
+                <center class="title">自己紹介</center>
+                <p class="text" align="left">はじめまして。</p>
+                <p class="text" align="left">横川咲耶子と申します。</p>
+                <p class="text" align="left">登録販売者として働き始めて ３年になります。薬の悩みに応える アプリケーションを作りたくて プログラミングを始めました。</p>
+                <p class="text" align="left">まだ４か月目ですが、必死に 勉強しています。</p>
+            </div>   
+        </div>
+        <div class="box box_skill">
+            <div class="skill-content fadein-hidden bird-img-left"></div>
+            <div class="skill-content fadein-hidden skill">
+                <center class="title" cellspacing="0">スキル</center>
+                <table class="skill-table">
+                    <tr>
+                        <td class="text-skill">HTML</td>
+                        <td class="text-skill">★★★</td>
+                    </tr>
+                    <tr>
+                        <td class="text-skill">CSS</td>
+                        <td class="text-skill">★★★</td>
+                    </tr>
+                    <tr>
+                        <td class="text-skill">JavaScript</td>
+                        <td class="text-skill">★</td>
+                    </tr>
+                    <tr>
+                        <td class="text-skill">PHP</td>
+                        <td class="text-skill">★</td>
+                    </tr>
+                </table>
+            </div>  
+        </div>
+        <div class="box box_product">
+            <div class="product-content fadein-hidden bird-img-right"></div>
+            <div class="product-content fadein-hidden product">
+                <center class="title">制作物</center>
+            </div>  
+        </div>
+    </div>
+
+    <script>
+    $(function(){
+        // profileのアニメーション処理
+        $(".profile-content").on("inview", function (event, isInView) {
+            if (isInView) {
+              $(this).stop().addClass("is-show animate__animated animate__fadeInRight");
+            }
+        });
+        // profileのアニメーション処理
+        
+        // skilのアニメーション処理
+        $(".skill-content").on("inview", function (event, isInView) {
+            if (isInView) {
+              $(this).stop().addClass("is-show animate__animated animate__fadeInLeft");
+            }
+        });
+        // skilのアニメーション処理
+        
+        // productのアニメーション処理
+        $(".product-content").on("inview", function (event, isInView) {
+            if (isInView) {
+              $(this).stop().addClass("is-show animate__animated animate__fadeInLeft");
+            }
+        });
+        // productのアニメーション処理
+
+});
+    $(function() {
+        $('#sky').jQlouds({
+            src: 'images/cloud2.png',
+            // skyHeight: 200,
+            minClouds: 80,
+            maxClouds: 100,
+            wind: true
+        });
+        
+        setTimeout(function(){
+            load_effect();
+        },700);
+    });
+
+    //ふわっとロード
+    function load_effect(){
+        var tt = $(window).scrollTop();
+        var hh = $(window).height();
+        $('.load-fade').each(function(){
+            var yy = $(this).offset().top;
+            if (tt > yy - hh){
+                $(this).addClass('done');
+            }
+        });
+    }
+    </script>
+</body>
+</html>
